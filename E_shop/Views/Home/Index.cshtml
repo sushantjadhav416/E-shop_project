@@ -1,0 +1,453 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <!-- banner bg main start -->
+    <div class="banner_bg_main_h">
+        <!-- header top section start -->
+        <div class="container">
+            <div class="header_section_top">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="custom_menu">
+                            <ul>
+                                <li><a href="">Best Sellers</a></li>
+                                <li><a href="#">Today's Deals</a></li>
+                                <li><a href="#">Customer Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header top section start -->
+        <!-- logo section start -->
+        <div class="logo_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo"><a href="home"><img src="~/images/logo.png"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- logo section end -->
+        <!-- header section start -->
+        <div class="header_section">
+            <div class="container">
+                <div class="containt_main">
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All Category
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" asp-area="" asp-controller="Electronics" asp-action="Index">Electronics</a>
+                            <a class="dropdown-item" href="fashion">Fashion</a>
+                            <a class="dropdown-item" href="grocery">Grocery</a>
+                        </div>
+                    </div>
+                    <div class="main">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search this blog">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_box">
+                        <div class="lang_box ">
+                        <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="padding_10">Login</span>
+                        </a>
+                        </div>
+                        <div class="login_menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <span class="padding_10">Cart<small id="crt"></small></span>
+                                    </a>
+                                </li>
+                                <li>
+                                <a asp-area="" asp-controller="Register" asp-action="RegisterUser">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span class="padding_10">Register</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header section end -->
+        <!-- banner section start -->
+        <div class="banner_section layout_padding">
+            <div class="container">
+                <div id="my_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h1 class="banner_taital">Get Start <br>Your favourite shoping</h1>
+                                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h1 class="banner_taital">Get Start <br>Your favourite shoping</h1>
+                                    <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- banner section end -->
+    </div>
+    <!-- banner bg main end -->
+    <!-- fashion section start -->
+    <div class="fashion_section">
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <h1 class="fashion_taital">Man & Woman Fashion</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Man T -shirt</h4>
+                                        <p class="price_text">Price <span style="color: #eee7e7;"> 100 Rs.</span></p>
+                                        <div class="tshirt_img"><img src="~/lib/images/tshirt-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Man -shirt</h4>
+                                        <p class="price_text">Price  <span style="color: #e8e1e1;"> 200 Rs.</span></p>
+                                        <div class="tshirt_img"><img src="~/lib/images/dress-shirt-img.jfif"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Woman Scart</h4>
+                                        <p class="price_text">Price  <span style="color: #efeaea;"> 500 Rs. </span></p>
+                                        <div class="W_img"><img src="~/lib/images/women-clothes-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="fashion_taital">Man & Woman Fashion</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Man T-shirt</h4>
+                                        <p class="price_text">Price<span style="color:#e3dddd;"> 100 Rs.</span></p>
+                                        <div class="tshirt_img"><img src="~/lib/images/tshirt-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Man Shirt</h4>
+                                        <p class="price_text">Price<span style="color:#f0e5e5;">200 Rs.</span></p>
+                                        <div class="tshirt_img"><img src="~/lib/images/dress-shirt-img.jfif"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Woman Scart</h4>
+                                        <p class="price_text">Price  <span style="color: #d1c4c4;"> 500 Rs</span></p>
+                                        <div class="W_img"><img src="~/lib/images/women-clothes-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- fashion section end -->
+    <!-- electronic section start -->
+    <div class="fashion_section">
+        <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <h1 class="fashion_taital">Electronic</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Laptop</h4>
+                                        <p class="price_text">Start Price  <span style="color: #f6e9e9;">10,000 Rs.</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/laptop-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Mobile</h4>
+                                        <p class="price_text">Start Price  <span style="color: #fdf4f4;">5000 Rs.</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/mobile-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Computers</h4>
+                                        <p class="price_text">Start Price  <span style="color: #efe6e6;">10,000 Rs.</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/computer-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="fashion_taital">Electronic</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Laptop</h4>
+                                        <p class="price_text">Start Price  <span style="color: #f1eaea;"> 10,000 Rs.</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/laptop-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Mobile</h4>
+                                        <p class="price_text">Start Price  <span style="color: #ece8e8;"> 5000 Rs.</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/mobile-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Computers</h4>
+                                        <p class="price_text">Start Price  <span style="color: #e9e2e2;"> 10000.RS</span></p>
+                                        <div class="electronic_img"><img src="~/lib/images/computer-img.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!-- electronic section end -->
+    <!-- G  section start -->
+    <div class="G_section">
+        <div id="G_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <h1 class="fashion_taital">Daily Grocery Needs</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Shampoo Products</h4>
+                                        <p class="price_text">Start Price  <span style="color: #efebeb;"> 100 Rs.</span></p>
+                                        <div class="G_img"><img src="~/lib/images/shamp.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Tea Products</h4>
+                                        <p class="price_text">Start Price  <span style="color: #faf4f4;"> 50 Rs.</span></p>
+                                        <div class="G_img"><img src="~/lib/images/tea.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Froots</h4>
+                                        <p class="price_text">Start Price<span style="color: #fcf5f5;"> 50 Rs.</span></p>
+                                        <div class="G_img"><img src="~/lib/images/froots.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <h1 class="fashion_taital">Daily Grocery Needs</h1>
+                        <div class="fashion_section_2">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Shampoo Products</h4>
+                                        <p class="price_text">Starting Price <span style="color: #f0ecec;">100 </span></p>
+                                        <div class="G_img"><img src="~/lib/images/shamp.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Tea Products</h4>
+                                        <p class="price_text">Start Price<span style="color: #e0d6d6;">100 </span></p>
+                                        <div class="G_img"><img src="~/lib/images/tea.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4">
+                                    <div class="box_main">
+                                        <h4 class="shirt_text">Froots</h4>
+                                        <p class="price_text">Start Price  <span style="color: #f6efef;">100</span></p>
+                                        <div class="G_img"><img src="~/lib/images/froots.png"></div>
+                                        <div class="btn_main">
+                                            <div class="buy_bt"><a href="#" onclick="mycart()">Buy Now</a></div>
+                                            <div class="seemore_bt"><a href="#">See More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#G_main_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#G_main_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+
+        </div>
+    </div>
+    <!-- G  section end -->
+    <!-- footer section start -->
+    <div class="footer_section layout_padding">
+        <div class="container">
+            <div class="footer_logo"><a href="Home.html"><img src="~/lib/images/logo.png"></a></div>
+            <div class="input_bt">
+                <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
+            <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
+            </div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Gift Ideas</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
+        </div>
+    </div>
+    <!-- footer section end -->
+    <!-- copyright section start -->
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">© 2023 All Rights Reserved by e-shop Group</p>
+        </div>
+    </div>
+    <!-- copyright section end -->
+   
+
+
