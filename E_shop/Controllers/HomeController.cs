@@ -1,6 +1,12 @@
-﻿using E_shop.Models;
+﻿using E_shop.Data;
+using E_shop.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Web;
+using Microsoft.AspNetCore.Session;
+using System.Security.Cryptography;
+//using MySqlX.XDevAPI;
+using System.Text;
 
 namespace E_shop.Controllers
 {
@@ -28,5 +34,7 @@ namespace E_shop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

@@ -1,9 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
     <!-- banner bg main start -->
-    <div class="banner_bg_main_h">
+<div class="banner_bg_main_h" style="background : url(../lib/images/Home_banner.png);">
         <!-- header top section start -->
         <div class="container">
             <div class="header_section_top">
@@ -26,26 +25,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="logo"><a href="home"><img src="~/images/logo.png"></a></div>
+                        <div class="logo"><a href="home"><img src="~/lib/images/logo.png"></a></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- logo section end -->
         <!-- header section start -->
-        <div class="header_section">
+        <div class="header_section" >
             <div class="container">
                 <div class="containt_main">
-
-
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             All Category
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" asp-area="" asp-controller="Electronics" asp-action="Index">Electronics</a>
-                            <a class="dropdown-item" href="fashion">Fashion</a>
-                            <a class="dropdown-item" href="grocery">Grocery</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Fashion" asp-action="Index">Fashion</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Grocery" asp-action="Index">Grocery</a>
                         </div>
                     </div>
                     <div class="main">
@@ -60,12 +57,12 @@
                         </div>
                     </div>
                     <div class="header_box">
-                        <div class="lang_box ">
+                        
                         <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <span class="padding_10">Login</span>
                         </a>
-                        </div>
+                        
                         <div class="login_menu">
                             <ul>
                                 <li>

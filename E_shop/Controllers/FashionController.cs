@@ -3,14 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace E_shop.Controllers
 {
-    public class ElectronicsController : Controller
+    public class FashionController : Controller
     {
-        // GET: ElectronicsController
+        // GET: FashionController1
         public ActionResult Index()
         {
             return View();
         }
-
-       
     }
 }

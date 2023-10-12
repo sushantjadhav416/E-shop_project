@@ -7,12 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<RegisterDbcontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RegisterConnectionString")));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<RegisterDbcontext>();
+builder.Services.AddDbContext<DB_Entities>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("RegisterConnectionString")));
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DB_Entities>();
 
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

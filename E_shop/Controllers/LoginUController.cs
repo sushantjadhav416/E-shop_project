@@ -1,5 +1,5 @@
 ﻿using E_shop.Models;
-using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,46 +7,56 @@ namespace E_shop.Controllers
 {
     public class LoginUController : Controller
     {
-       
+      
         private readonly SignInManager<IdentityUser> signinmanager;
+        
+        private readonly ILogger<LoginUController> _logger;
 
-        public LoginUController(SignInManager<IdentityUser> signinManager)
+        public LoginUController(SignInManager<IdentityUser> signInManager,ILogger<LoginUController> logger)
         {
-            this.signinmanager = signinManager;
+           
+            this.signinmanager = signInManager;
+           
+            this._logger = logger;
+
         }
 
-        // GET: LoginUController
+        [HttpGet]
         public ActionResult Loginpage()
         {
-            return View();
+           
+          return View();
         }
 
         [HttpPost]
         [ActionName("Loginpage")]
-        public async Task<ActionResult> Loginpage(Login ln, string returnurl=null)
+        public async Task<ActionResult> Loginpage(Login ln,string returnUrl= null)
         {
-            if (ModelState.IsValid)
+            returnUrl = returnUrl ?? Url.Content("~/");
+
+            if (!ModelState.IsValid)
             {
-                var result = await signinmanager.PasswordSignInAsync(ln.Email, ln.Password, ln.RememberMe, false);
+                var result = await this.signinmanager.PasswordSignInAsync(ln.FirstName, ln.Password, ln.RememberMe, false);
 
                 if (result.Succeeded)
                 {
-                    if (returnurl == null || returnurl == "/")
+                    if (returnUrl == null || returnUrl == "/")
                     {
+                        _logger.LogInformation("User logged in.");
                         return RedirectToAction("Index", "Home", new { area = "" });
                     }
                     else
                     {
-                        return RedirectToPage(returnurl);
+                        _logger.LogInformation("Incorrect Username or Password!");
+                        return RedirectToAction("login", "LoginU", new { area = "" });
                     }
                 }
-
-                ModelState.AddModelError("", "Username or Password Incorrect !!!!!!");
+                else
+                {
+                    _logger.LogInformation("login not possible");
+                }
             }
-
             return View();
         }
-
-
     }
 }

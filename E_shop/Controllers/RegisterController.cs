@@ -10,46 +10,50 @@ namespace E_shop.Controllers
         private  UserManager<IdentityUser> usermanager;
         private  SignInManager<IdentityUser> signinmanager;
 
-       
+        
+        private User model;
 
-        public RegisterController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager) { 
+        public RegisterController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager){ 
             this.usermanager = userManager;
             this.signinmanager = signInManager;
         }
 
         // GET: RegisterController
-       public ActionResult RegisterUser()
+        [HttpGet]
+        public ActionResult RegisterUser()
         {
          return View();
         }
 
         [HttpPost]
         [ActionName("RegisterUser")]
-        public async Task<ActionResult> RegisterUser(Register rst)
+        public async Task<ActionResult> RegisterUser(User rst)
         {
-           
-
             if (ModelState.IsValid)
             {
 
                 var User = new IdentityUser()
                 {
-                    UserName = rst.Name,
+                    UserName = rst.FirstName,
                     Email = rst.Email
                 };
 
-                var result = await usermanager.CreateAsync(User, rst.Password);
+                var result = await this.usermanager.CreateAsync(User, rst.Password);
 
                 if (result.Succeeded)
                 {
-                    await signinmanager.SignInAsync(User, false);
+                    await signinmanager.SignInAsync(User, true);
                     return RedirectToAction("Index", "Home", new { area = "" });
                 }
-
-                foreach (var error in result.Errors)
+                else
                 {
-                    ModelState.AddModelError("", error.Description);
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return RedirectToAction("RegisterUser", "Register", new { area = "" });
                 }
+              
             }
 
             return View();

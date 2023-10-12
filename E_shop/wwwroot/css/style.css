@@ -1,15 +1,14 @@
 
 /*------import Files --------------*/
 
-@import url(animate.min.css);
+@import url(../css/animate.min.css);
 @import url(normalize.css);
-@import url(icomoon.css);
-@import url(css/font-awesome.min.css);
+@import url(../css/icomoon.css);
+@import url(../css/font-awesome.min.css);
 @import url(meanmenu.css);
 @import url(swiper.min.css);
-@import url(jquery.fancybox.min.css);
-@import url(jquery-ui.css);
-
+@import url(../jquery.fancybox.min.css);
+@import url(../css/jquery-ui.css);
 
 *{
     box-sizing: border-box !important;
@@ -36,7 +35,7 @@ a{
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
+    
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
@@ -129,7 +128,7 @@ a,
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
+    
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
@@ -208,7 +207,7 @@ button {
 .banner_bg_main{
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../lib/images/banner-bg.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -216,7 +215,7 @@ button {
 .banner_bg_main_h{
     width: 100%;
     float: left;
-    background-image: url(../images/Home_banner.png);
+    background-image: url(../lib/images/Home_banner.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -224,7 +223,7 @@ button {
 .banner_bg_main_F{
     width: 100%;
     float: left;
-    background-image: url(../images/fas.jfif);
+    background-image: url(../lib/images/fas.jfif);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -232,7 +231,7 @@ button {
 .banner_bg_main_Glo{
     width: 100%;
     float: left;
-    background-image: url(../images/grocery.png);
+    background-image: url(../lib/images/grocery.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -288,7 +287,7 @@ button {
 
 .logo_section {
     width: 100%;
-    float: center;
+   
 }
 
 .logo {
@@ -969,6 +968,3 @@ input.mail_bt::placeholder {
 .margin_top90 {
     margin-top: 90px;
 }
-
-
-/* copyright section end */
