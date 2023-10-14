@@ -21,12 +21,12 @@ spec:
         env:
           - name: ConnectionStrings__ProductsContext
             value: Server=eshop-mssql-service;Database=AuthDB;User=sa;Password="Sushant@123";
-        # resources:
-        #   limits:
-        #     cpu: "2"
-        #     memory: "2Gi"
-        #   requests:
-        #     cpu: "1"
+        resources:
+        limits:
+           cpu: "2"
+           memory: "2Gi"
+           requests:
+             cpu: "1"
 ---
 
 #Frontend Service
