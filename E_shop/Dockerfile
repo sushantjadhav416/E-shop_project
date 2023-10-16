@@ -19,6 +19,11 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+ENV ConnectionStrings__ProductsContext Server=eshop-mssql-service
+ENV ConnectionStrings__ProductsContext Database=AuthDB
+ENV ConnectionStrings__ProductsContext User=sa
+ENV ConnectionStrings__ProductsContext Password=Sushant@123; 
+
 ENV ASPNETCORE_ENVIRONMENT Development
 ENTRYPOINT ["dotnet", "E_shop.dll"]
 
