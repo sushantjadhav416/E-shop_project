@@ -10,9 +10,6 @@ namespace E_shop.Controllers
         private  UserManager<IdentityUser> usermanager;
         private  SignInManager<IdentityUser> signinmanager;
 
-        
-        private User model;
-
         public RegisterController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager){ 
             this.usermanager = userManager;
             this.signinmanager = signInManager;
@@ -32,17 +29,17 @@ namespace E_shop.Controllers
             if (ModelState.IsValid)
             {
 
-                var User = new IdentityUser()
+                var MUser = new IdentityUser()
                 {
                     UserName = rst.FirstName,
                     Email = rst.Email
                 };
 
-                var result = await this.usermanager.CreateAsync(User, rst.Password);
+                var result = await this.usermanager.CreateAsync(MUser, rst.Password);
 
                 if (result.Succeeded)
                 {
-                    await signinmanager.SignInAsync(User, true);
+                    await signinmanager.SignInAsync(MUser, true);
                     return RedirectToAction("Index", "Home", new { area = "" });
                 }
                 else
