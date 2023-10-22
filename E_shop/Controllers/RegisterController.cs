@@ -5,12 +5,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace E_shop.Controllers
 {
-    public class RegisterController : Controller
+    interface User_regi
     {
-        private  UserManager<IdentityUser> usermanager;
-        private  SignInManager<IdentityUser> signinmanager;
+        internal ActionResult RegisterUser();
+    }
+    public class RegisterController : Controller, User_regi
+    {
+        private UserManager<IdentityUser> usermanager;
+        private SignInManager<IdentityUser> signinmanager;
 
-        public RegisterController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager){ 
+        public RegisterController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager) {
             this.usermanager = userManager;
             this.signinmanager = signInManager;
         }
@@ -19,42 +23,56 @@ namespace E_shop.Controllers
         [HttpGet]
         public ActionResult RegisterUser()
         {
-         return View();
+            return View();
         }
+
+
 
         [HttpPost]
         [ActionName("RegisterUser")]
+
+        
         public async Task<ActionResult> RegisterUser(User rst)
         {
-            if (ModelState.IsValid)
+            try
             {
-
-                var MUser = new IdentityUser()
+                if (ModelState.IsValid)
                 {
-                    UserName = rst.FirstName,
-                    Email = rst.Email
-                };
 
-                var result = await this.usermanager.CreateAsync(MUser, rst.Password);
-
-                if (result.Succeeded)
-                {
-                    await signinmanager.SignInAsync(MUser, true);
-                    return RedirectToAction("Index", "Home", new { area = "" });
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
+                    var MUser = new IdentityUser()
                     {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                    return RedirectToAction("RegisterUser", "Register", new { area = "" });
-                }
-              
-            }
+                        UserName = rst.FirstName,
+                        Email = rst.Email
+                    };
 
+                    var result = await this.usermanager.CreateAsync(MUser, rst.Password);
+
+                    if (result.Succeeded)
+                    {
+                        await signinmanager.SignInAsync(MUser, true);
+                        return RedirectToAction("Index", "Home", new { area = "" });
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                        return RedirectToAction("RegisterUser", "Register", new { area = "" });
+                    }
+
+                }
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
             return View();
+
         }
+    
+   
+    
+
            
          
     }
