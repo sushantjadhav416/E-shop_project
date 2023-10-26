@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace E_shop.Migrations
 {
-    [DbContext(typeof(DB_Entities))]
+    [DbContext(typeof(DB_Entities_context))]
     [Migration("20230929074542_first")]
     partial class first
     {

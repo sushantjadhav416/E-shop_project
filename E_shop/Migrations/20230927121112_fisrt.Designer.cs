@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace E_shop.Migrations
 {
-    [DbContext(typeof(DB_Entities))]
+    [DbContext(typeof(DB_Entities_context))]
     [Migration("20230927121112_fisrt")]
     partial class fisrt
     {
