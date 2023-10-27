@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_shop.Migrations
 {
     [DbContext(typeof(DB_Entities_context))]
-    [Migration("20231008120303_Addmysql")]
-    partial class Addmysql
+    [Migration("20231026122154_addAuth")]
+    partial class addAuth
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
