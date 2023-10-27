@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace E_shop.Data
 {
-    public class DB_Entities : IdentityDbContext
+    public class DB_Entities_context : IdentityDbContext
     {
-        public DB_Entities(DbContextOptions<DB_Entities> options):base(options)
+        public DB_Entities_context(DbContextOptions<DB_Entities_context> options):base(options)
         {
-              Database.EnsureCreated();
+            Database.EnsureCreated();
         }
        
         // public DbSet<User> Users { get; set; }

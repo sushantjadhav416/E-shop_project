@@ -26,8 +26,6 @@ namespace E_shop.Controllers
             return View();
         }
 
-
-
         [HttpPost]
         [ActionName("RegisterUser")]
 

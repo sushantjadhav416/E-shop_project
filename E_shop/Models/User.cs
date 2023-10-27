@@ -5,6 +5,8 @@ namespace E_shop.Models
 {
     public class User
     {
+        [Required]
+        public Guid Us_id { get; set; }
        
         [Required]
         [StringLength(50, MinimumLength = 3)]
