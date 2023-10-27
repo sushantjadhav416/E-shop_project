@@ -29,7 +29,7 @@ services:
     expose:
       - "1433"
     environment:
-      ACCEPT_EUL: "Y"
+      ACCEPT_EULA: "Y"
       SA_PASSWORD: "@Aa123456"
       MSSQL_PID: Express
     ports:
