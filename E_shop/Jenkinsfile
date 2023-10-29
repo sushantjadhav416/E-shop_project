@@ -19,17 +19,17 @@ pipeline {
     //     sh 'cd  mvn clean package'
     //   }
     // }
-    stage('Static Code Analysis') {
-      environment {
-        SONAR_URL = "http://localhost:9000"
-        SONAR_AUTH_TOKEN = "39e43564678269e2a20c9fc159dfb7243ea1a559"
-      }
-      steps {
-        withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-          sh 'cd E_shop && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
-        }
-      }
-    }
+    // stage('Static Code Analysis') {
+    //   environment {
+    //     SONAR_URL = "http://localhost:9000"
+    //     SONAR_AUTH_TOKEN = "39e43564678269e2a20c9fc159dfb7243ea1a559"
+    //   }
+    //   steps {
+    //     withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
+    //       sh 'cd E_shop && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+    //     }
+    //   }
+    // }
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "sushantjadhavhcl/eshop-cicd:${BUILD_NUMBER}"
