@@ -30,10 +30,10 @@ spec:
         env:
         - name: ACCEPT_EULA
           value: "Y"
-        - name: MSSQL_SA_PASSWORD
+        - name: SA_PASSWORD
           value: "@Aa123456"
         - name: MSSQL_PID
-          value: Express
+          value: "Express"
 ---
 
 #Backend service
