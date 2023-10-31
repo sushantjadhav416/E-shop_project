@@ -9,8 +9,9 @@ services:
     ports:
       - "8005:80"
     environment:
-      ConnectionStrings__RegisterConnectionString: "Server=db,1433;Initial Catalog=AuthDB;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;"
-      ASPNETCORE_ENVIRONMENT: "Development"
+       ConnectionStrings__RegisterConnectionString: "Server=db;Initial Catalog=AuthDB;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;"
+       ASPNETCORE_ENVIRONMENT: "Development"
+       MSSQL_SA_PASSWORD: "@Aa123456"
     depends_on:
       - db
   
@@ -30,7 +31,9 @@ services:
       - "1433"
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: "@Aa123456"
+      MSSQL_ENABLE_HADR: "1"
+      MSSQL_AGENT_ENABLED: "1"
+      MSSQL_SA_PASSWORD: "@Aa123456"
       MSSQL_PID: Express
     ports:
       - "1433:1433"

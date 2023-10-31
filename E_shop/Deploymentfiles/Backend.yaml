@@ -16,8 +16,8 @@ spec:
       containers:
       - name: eshop-mssql
       # image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
-      # image: mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04
-        image: mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-16.04
+        image: mcr.microsoft.com/mssql/server:2019-latest
+       # image: mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-16.04
       # image: microsoft/mssql-server-linux
         resources:
           limits:
@@ -30,10 +30,14 @@ spec:
         env:
         - name: ACCEPT_EULA
           value: "Y"
-        - name: SA_PASSWORD
+        - name: MSSQL_ENABLE_HADR
+          value: "1"
+        - name: MSSQL_AGENT_ENABLED
+          value: "1"
+        - name: MSSQL_SA_PASSWORD
           value: "@Aa123456"
-        - name: MSSQL_PID
-          value: "Express"
+
+          
 ---
 
 #Backend service

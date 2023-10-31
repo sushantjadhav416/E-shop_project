@@ -19,12 +19,12 @@ spec:
         ports:
         - containerPort: 80
         env:
-          - name: ConnectionStrings_RegisterConnectionString
-            value: Server=eshop-mssql-service,30201;Database=AuthDB;User=sa;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=True;
+          - name: ConnectionStrings__RegisterConnectionString
+            value: Server=eshop-mssql-service;Initial Catalog=AuthDB;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;
         resources:
         limits:
-           cpu: "2"
-           memory: "2Gi"
+           cpu: "3"
+           memory: "5Gi"
            requests:
              cpu: "1"
 ---
