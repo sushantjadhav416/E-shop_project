@@ -21,12 +21,12 @@ spec:
         env:
           - name: ConnectionStrings__RegisterConnectionString
             value: Server=eshop-mssql-service;Initial Catalog=AuthDB;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;
-        resources:
-        limits:
-           cpu: "3"
-           memory: "5Gi"
-           requests:
-             cpu: "1"
+        # resources:
+        # limits:
+        #    cpu: "3"
+        #    memory: "5Gi"
+        #    requests:
+        #      cpu: "1"
 ---
 
 #Frontend Service
