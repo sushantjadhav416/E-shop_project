@@ -9,7 +9,7 @@ namespace E_shop.Data
     {
         public DB_Entities_context(DbContextOptions<DB_Entities_context> options):base(options)
         {
-            Database.EnsureCreated();
+
         }
        
         // public DbSet<User> Users { get; set; }
