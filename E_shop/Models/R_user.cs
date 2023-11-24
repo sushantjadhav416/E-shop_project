@@ -6,6 +6,8 @@ namespace E_shop.Models
     public class R_user
     {
 
+        public int Id { get; set; }
+
         [Required]
         [StringLength(50, MinimumLength = 3)]
         public string FirstName { get; set; }

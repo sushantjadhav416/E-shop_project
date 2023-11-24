@@ -67,6 +67,20 @@ namespace E_shop.Controllers
             return View();
 
         }
+
+        public ActionResult ForgotPassword(Forgotpassword model)
+        {
+            if (ModelState.IsValid)
+            {
+                ModelState.Clear();
+
+                model.Emailsent = true;
+            }
+            return View(model);
+
+        }
+
+
     
    
     

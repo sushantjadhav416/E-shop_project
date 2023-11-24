@@ -1,6 +1,7 @@
 ﻿@model E_shop.Models.Login
 
 @{
+   
 }
 <section class="vh-100">
     <div class="container-fluid h-custom">
@@ -20,6 +21,7 @@
             </div>
 
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                
                 <form method="post">
                     <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                         <label class="text-center fw-bold mx-3 mb-0" for="form3Example3">Please Login here With Authorise Credentials</label>
@@ -59,8 +61,12 @@
                                 Remember me
                             </label>
                         </div>
-                        @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
-                        <a href="#!" class="text-body">Forgot password?</a>
+                        @if(Model?.done==true){
+                         <div class="alert alert-success" role="alert">
+                             <p> The  user name or Password is incorrect please check and try again </p>
+                         </div> 
+                        }
+                        <a asp-area="" asp-controller="LoginU" asp-action="Forgotpassword" class="text-body">Forgot password?</a>
                     </div>
 
                     <div class="text-center text-lg-start mt-4 pt-2">

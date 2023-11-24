@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-    <!-- banner bg main start -->
+
+<!-- banner bg main start -->
 <!-- banner bg main start -->
 <div class="banner_bg_main_h">
     <!-- header top section start -->
@@ -11,7 +12,7 @@
                 <div class="col-sm-12">
                     <div class="custom_menu">
                         <ul>
-                            <li><a href="">Best Sellers</a></li>
+                            <li><a href="#">Best Sellers</a></li>
                             <li><a href="#">Today's Deals</a></li>
                             <li><a href="#">Customer Service</a></li>
                         </ul>
@@ -36,8 +37,6 @@
     <div class="header_section">
         <div class="container">
             <div class="containt_main">
-
-
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         All Category
@@ -60,13 +59,13 @@
                     </div>
                 </div>
                 <div class="header_box">
-                    <div >
+                    <button class="btn btn-danger">
                         <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <span class="padding_10">Login</span>
                         </a>
+                    </button>
 
-                    </div>
                     <div class="login_menu">
                         <ul>
                             <li>
@@ -76,10 +75,12 @@
                                 </a>
                             </li>
                             <li>
+
                                 <a asp-area="" asp-controller="Register" asp-action="RegisterUser">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                     <span class="padding_10">Register</span>
                                 </a>
+
                             </li>
                         </ul>
                     </div>

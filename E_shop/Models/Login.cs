@@ -13,6 +13,8 @@ namespace E_shop.Models
         public string Password { get; set; }
         public bool RememberMe { get; set; }
 
-        public string? ErrorMessage { get; set; }
+        public bool done { get; set; }
+
+
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_shop.Migrations
 {
     [DbContext(typeof(DB_Entities_context))]
-    [Migration("20231027065238_newauth")]
-    partial class newauth
+    [Migration("20231028061434_Sql_migrations")]
+    partial class Sql_migrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

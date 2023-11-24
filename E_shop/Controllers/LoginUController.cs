@@ -44,6 +44,7 @@ namespace E_shop.Controllers
             try
             {
                 returnUrl = returnUrl ?? Url.Content("~/");
+                ln.done = false;
 
                 if (!ModelState.IsValid)// && ln.Password != null && ln.FirstName != null)
                 {
@@ -66,14 +67,17 @@ namespace E_shop.Controllers
                     else
                     {
                         ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                        ln.done = true;
                         return RedirectToAction("Loginpage", "LoginU", new { area = "" });
-
+                        
                     }
                 }
                 else
                 {
-                    return RedirectToAction("Loginpage", "LoginU", new { area = "" });
-                }
+					ln.done = true;
+					return RedirectToAction("Loginpage", "LoginU", new { area = "" });
+					
+				}
 
             }
             catch (Exception ex)
@@ -84,5 +88,19 @@ namespace E_shop.Controllers
             return View();
 
         }
+
+        public ActionResult Forgotpassword(Forgotpassword model)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                ModelState.Clear();
+
+                model.Emailsent = true;
+            }
+            return View(model);
+
+        }
+
     }
 }

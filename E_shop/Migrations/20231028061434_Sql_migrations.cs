@@ -5,7 +5,7 @@
 namespace E_shop.Migrations
 {
     /// <inheritdoc />
-    public partial class newauth : Migration
+    public partial class Sql_migrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
