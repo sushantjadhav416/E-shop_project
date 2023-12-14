@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-    <!-- banner bg main start -->
+<!-- banner bg main start -->
 <!-- banner bg main start -->
 <div class="banner_bg_main_h">
     <!-- header top section start -->
@@ -60,13 +60,11 @@
                     </div>
                 </div>
                 <div class="header_box">
-                    <div >
-                        <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <span class="padding_10">Login</span>
-                        </a>
+                    <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span class="padding_10">Login</span>
+                    </a>
 
-                    </div>
                     <div class="login_menu">
                         <ul>
                             <li>
@@ -76,10 +74,12 @@
                                 </a>
                             </li>
                             <li>
+                               
                                 <a asp-area="" asp-controller="Register" asp-action="RegisterUser">
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                     <span class="padding_10">Register</span>
                                 </a>
+                                
                             </li>
                         </ul>
                     </div>

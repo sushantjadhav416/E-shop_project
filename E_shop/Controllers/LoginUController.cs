@@ -65,7 +65,7 @@ namespace E_shop.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                        ModelState.AddModelError("password", "The user name or password provided is incorrect.");
                         return RedirectToAction("Loginpage", "LoginU", new { area = "" });
 
                     }

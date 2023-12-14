@@ -1,14 +1,14 @@
 
 /*------import Files --------------*/
 
-@import url(../css/animate.min.css);
+@import url(animate.min.css);
 @import url(normalize.css);
-@import url(../css/icomoon.css);
-@import url(../css/font-awesome.min.css);
+@import url(icomoon.css);
+@import url(font-awesome.min.css);
 @import url(meanmenu.css);
 @import url(swiper.min.css);
-@import url(../jquery.fancybox.min.css);
-@import url(../css/jquery-ui.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
 
 *{
     box-sizing: border-box !important;
@@ -20,7 +20,8 @@ html{
     overflow-x: hidden;
 }
 
-body{
+body
+{
     color: #666666;
     font-size: 14px;
     line-height: 1.80857;
@@ -498,11 +499,12 @@ a:hover {
 .banner_taital {
     width: 100%;
     font-size: 60px;
-    color: #0a0808;
+    color: darkblue;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
 }
+
 
 .buynow_bt {
     width: 170px;
