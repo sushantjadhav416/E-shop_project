@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mvc
-        image: sushantjadhavhcl/eshop-cicd:1
+        image: sushantjadhavhcl/eshop-cicd:2
         ports:
         - containerPort: 80
         env:
@@ -41,7 +41,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30050
+    nodePort: 30052
   type: NodePort
 
 
