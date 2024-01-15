@@ -20,18 +20,21 @@ jobs:
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Image
-      run: TAG_DATE=$(date +'%Y%m%d');\
+      run: |
+           TAG_DATE=$(date +'%Y%m%d');
            docker build -t sushantjadhavhcl/eshop_updated:TAG_DATE .
 
     - name: Push to Docker Hub
-      run: docker push sushantjadhavhcl/eshop_updated:TAG_DATE
+      run: |
+           docker push sushantjadhavhcl/eshop_updated:TAG_DATE
       
     - name: Update Deployment File
-      run: git config user.email "sushantjadhav416@gmail.com" \
-           git config user.name "sushantjadhav416" \
-           TAG_DATE=${TAG_DATE} \
-           sed -i "s/replaceImageTag/${TAG_DATE}/g" E_shop/Deploymentfiles/Frontend.yaml \
-           git add E_shop/Deploymentfiles/Frontend.yaml \
-           git add -A \
-           git commit -m "Update deployment image to version ${TAG_DATE}" \
+      run: |
+           git config user.email "sushantjadhav416@gmail.com" 
+           git config user.name "sushantjadhav416" 
+           TAG_DATE=${TAG_DATE} 
+           sed -i "s/replaceImageTag/${TAG_DATE}/g" E_shop/Deploymentfiles/Frontend.yaml 
+           git add E_shop/Deploymentfiles/Frontend.yaml 
+           git add -A 
+           git commit -m "Update deployment image to version ${TAG_DATE}" 
            git push
