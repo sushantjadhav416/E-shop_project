@@ -18,4 +18,5 @@ jobs:
       run: |
         cd E_shop
         docker build . --file Dockerfile --tag eshop-updated:$(date +%s)
+        docker tag eshop-updated:$(date +%s) sushantjadhavhcl/eshop-updated:$(date +%s)
         docker push sushantjadhavhcl/eshop-updated:$(date +%s)
