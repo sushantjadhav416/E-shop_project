@@ -22,7 +22,7 @@ jobs:
     - name: Build Docker Image
       run: |
            TAG_DATE=$(date +'%Y%m%d');
-           docker build -t sushantjadhavhcl/eshop_updated:TAG_DATE .
+           docker build -t sushantjadhavhcl/eshop_updated:TAG_DATE ./E_shop/
 
     - name: Push to Docker Hub
       run: |
