@@ -21,6 +21,8 @@ jobs:
 
     - name: Build Docker Image and Updatating the deployment files
       run: |
+           git config user.email "sushantjadhav416@gmail.com"
+           git config user.name "sushantjadhav416"
            TAG_DATE=$(date +'%Y%m%d');
            docker build -t sushantjadhavhcl/eshop_updated:${TAG_DATE} ./E_shop/
            docker push sushantjadhavhcl/eshop_updated:${TAG_DATE}
