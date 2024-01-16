@@ -29,6 +29,6 @@ jobs:
            git config user.name "sushantjadhav416" 
            git add -A
            git commit -m "Update deployment image to version ${TAG_DATE}" 
-           git push https://${{ secrets.GI_TOKEN }}@github.com/${{ secrets.DOCKER_USERNAME }}/E-shop_project HEAD:master
+           git push https://${{ secrets.GI_TOKEN }}@github.com/sushantjadhav416/E-shop_project HEAD:master
            
     
