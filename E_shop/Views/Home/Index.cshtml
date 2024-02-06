@@ -1,6 +1,7 @@
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
+
 <!-- banner bg main start -->
 <!-- banner bg main start -->
 <div class="banner_bg_main_h">
@@ -36,8 +37,6 @@
     <div class="header_section">
         <div class="container">
             <div class="containt_main">
-
-
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         All Category
@@ -58,6 +57,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="header_box">
                     <button class="btn btn-danger">
                         <a asp-area="" asp-controller="LoginU" asp-action="Loginpage">
@@ -124,6 +124,7 @@
     <!-- banner section end -->
 </div>
 <!-- banner bg main end -->
+
 <!-- fashion section start -->
 <div class="fashion_section">
     <div id="main_slider" class="carousel slide" data-ride="carousel">
@@ -425,7 +426,7 @@
 <!-- footer section start -->
 <div class="footer_section layout_padding">
     <div class="container">
-        <div class="footer_logo"><a href="Home.html"><img src="~/lib/images/logo.png"></a></div>
+        <div class="footer_logo"><a href="Home"><img src="~/lib/images/logo.png"></a></div>
         <div class="input_bt">
             <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
             <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
