@@ -15,3 +15,11 @@ This is a MVT architecture based application where View returns a page with titl
 - Execute the Docker build command to build docker image and use this application as container.
   
 - You can find Kubernetes deployment Yaml files in Deploymentfiles folder.
+
+## Technology Stack
+- User Interface: HTML ,CSS,JS, bootstarp
+- Database Connectivity: Entity Framework
+- Database Management System: MSSQL SERVER
+- Programming Language: c# .NET
+
+  
