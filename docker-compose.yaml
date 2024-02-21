@@ -1,4 +1,4 @@
-version: "3"
+version: "3.4"
 services:
    
   web:
@@ -7,10 +7,11 @@ services:
       dockerfile: Dockerfile
       context: E_shop
     ports:
-      - "8005"
+      - "8100:80"
     environment:
-      ConnectionStrings__RegisterConnectionString: "Server=db;Database=AuthBD;User=sa;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=True;MultiSubnetFailover=True;Encrypt=false;"
-      ASPNETCORE_ENVIRONMENT: "Development"
+       ConnectionStrings__RegisterConnectionString: "Server=db;Initial Catalog=AuthDB;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;"
+       ASPNETCORE_ENVIRONMENT: "Development"
+       MSSQL_SA_PASSWORD: "@Aa123456"
     depends_on:
       - db
   
@@ -25,11 +26,14 @@ services:
    
   db:
     container_name: mssql-db
-    image: "mcr.microsoft.com/mssql/server:2017-CU4-ubuntu-16.04" #"microsoft/mssql-server-linux"
+    image: "mcr.microsoft.com/mssql/server:2019-CU4-ubuntu-16.04" #"microsoft/mssql-server-linux"
     expose:
       - "1433"
     environment:
-      - SA_PASSWORD=@Aa123456
-      - ACCEPT_EULA=Y
+      ACCEPT_EULA: "Y"
+      MSSQL_ENABLE_HADR: "1"
+      MSSQL_AGENT_ENABLED: "1"
+      MSSQL_SA_PASSWORD: "@Aa123456"
+      MSSQL_PID: Express
     ports:
       - "1433:1433"

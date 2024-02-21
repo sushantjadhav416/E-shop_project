@@ -15,18 +15,18 @@ spec:
     spec:
       containers:
       - name: mvc
-        image: sushantjadhavhcl/eshop-cicd:2
+        image: sushantjadhavhcl/eshop-cicd:20240213090906061816
         ports:
         - containerPort: 80
         env:
-          - name: ConnectionStrings_RegisterConnectionString
-            value: Server=eshop-mssql-service;Database=AuthDB;User=sa;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=True;
-        resources:
-        limits:
-           cpu: "2"
-           memory: "2Gi"
-           requests:
-             cpu: "1"
+          - name: ConnectionStrings__RegisterConnectionString
+            value: Server=eshop-mssql-service;Initial Catalog=AuthDB2;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;
+        # resources:
+        # limits:
+        #    cpu: "3"
+        #    memory: "5Gi"
+        #    requests:
+        #      cpu: "1"
 ---
 
 #Frontend Service
@@ -41,7 +41,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30050
+    nodePort: 30052
   type: NodePort
 
 

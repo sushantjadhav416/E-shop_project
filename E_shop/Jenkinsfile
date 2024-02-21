@@ -21,12 +21,12 @@ pipeline {
     // }
     // stage('Static Code Analysis') {
     //   environment {
-    //     SONAR_URL = "http://0.0.0.0:9000"
-    //     // SONAR_AUTH_TOKEN = "4bfc1cec413007d3900019e06207e2567b31f1db"
+    //     SONAR_URL = "http://localhost:9000"
+    //     SONAR_AUTH_TOKEN = "39e43564678269e2a20c9fc159dfb7243ea1a559"
     //   }
     //   steps {
     //     withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-    //       sh 'cd spring-boot-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+    //       sh 'cd E_shop && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
     //     }
     //   }
     // }
@@ -36,11 +36,12 @@ pipeline {
         DOCKERFILE_LOCATION = "E_shop/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
-      steps {
+    steps {
         script {
             sh 'cd E_shop && docker build -t ${DOCKER_IMAGE} .'
             def dockerImage = docker.image("${DOCKER_IMAGE}")
-            docker.withRegistry('https://index.docker.io/v1/', "docker-cred") {
+            docker.withRegistry('https://index.docker.io/v1/', "docker-cred") 
+            {
                 dockerImage.push()
             }
         }

@@ -67,7 +67,6 @@ namespace E_shop.Controllers
                     else
                     {
                         ModelState.AddModelError("", "The user name or password provided is incorrect.");
-                        ln.done = true;
                         return RedirectToAction("Loginpage", "LoginU", new { area = "" });
                         
                     }
