@@ -5,6 +5,13 @@ This is Two teir ASP.NET MVC based web application containerize using Docker and
 
 Note. Dot NET dependencies are handled using the .csproj at the root directory of the repository.
 
+# Prerequisites:
+- Dot NET application hosted on the GitHub repo.
+- Jenkins server
+- Kubernetes cluster
+- Argo CD
+- GitHub Actions
+
 ## Application setup 
 This is a MVC architecture based application where View returns a page with title and message attributes to the view.
 
