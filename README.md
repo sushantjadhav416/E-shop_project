@@ -25,13 +25,23 @@ This is a MVC architecture based application where View returns a page with titl
 - Setup credentials of docker registry and add github Token.
 - Create Pipline in jenkins and configure jenkinsfile path and Build the pipline.
 
-## Continous Deployment Of Two Teir application.
+2. Using GitHub Actions:
+- Created .Net Build workflow  and Docker Build and push workflow.
+- At the time off push event happens on this repo the workflow is get triggerd.
 
-
+## Continous Deployment Of Two Teir application
+- In this project we are using GitOps tool Argo CD for continous deployment on AKS.
+- For that first Configure a AKS on AZURE  using Terraform like IAC tool.
+- After that , Configuration Argo CD on your target node of AKS.
+  follow this article for that https://argo-cd.readthedocs.io/en/stable/
+- After configuration sync your application with your Github repository .
+ 
 ## Technology Stack
 - User Interface: HTML ,CSS,JS, bootstarp
 - Database Connectivity: Entity Framework
+- Container Registry : Docker
+- Cloud : Azure 
 - Database Management System: MSSQL SERVER
-- Programming Language: c# .NET
+- Programming Language: C# .NET
 
   
