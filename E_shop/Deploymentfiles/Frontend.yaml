@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mvc
-        image: sushantjadhavhcl/eshop-cicd:202404022819282828282828232222212113090906061816
+        image: sushantjadhavhcl/eshop_updated:20240402
         ports:
         - containerPort: 80
         env:
