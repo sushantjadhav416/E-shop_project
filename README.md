@@ -4,7 +4,7 @@ This is an  E Commerce Web Application Developed in ASP.NET MVC  with CI-CD Jenk
 This is Two teir ASP.NET MVC based web application containerize using Docker and continously Deployed on AKS Using Argo cd Gitops Tool.
 
 ### Screenshot
-![Alt text](roject1_e-shop.png)
+![Alt text](Project1_e-shop.png)
 
 **Note:**  Dot NET dependencies are handled using the .csproj at the root directory of the repository.
 
