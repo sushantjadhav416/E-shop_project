@@ -49,7 +49,7 @@ This is a MVC architecture based application where View returns a page with titl
 ## Technology Stack
 - User Interface: HTML ,CSS,JS, bootstarp
 - Database Connectivity: Entity Framework
-- Container Registry : Docker
+- Container Registry : Docker Hub
 - Cloud : Azure 
 - Database Management System: MSSQL SERVER
 - Programming Language: C# .NET
