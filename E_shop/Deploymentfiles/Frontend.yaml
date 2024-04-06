@@ -1,5 +1,5 @@
 #Frontend deployment 
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v20240406# for v20240406sions before 1.9.0 use apps/v20240406eta2
 kind: Deployment
 metadata:
   name: eshop-deployment
@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
       - name: mvc
-        image: sushantjadhavhcl/eshop_updated:2024040602
+        image: sushantjadhav20240406l/eshop_updated:2024040602
         ports:
         - containerPort: 80
         env:
           - name: ConnectionStrings__RegisterConnectionString
-            value: Server=eshop-mssql-service;Initial Catalog=AuthDB2;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServerCertificate=Yes;
+            v20240406ue: Serv20240406=eshop-mssql-serv20240406e;Initial Catalog=AuthDB2;User ID=SA;Password=@Aa123456;Trusted_Connection=False;TrustServ20240406Certificate=Yes;
         # resources:
         # limits:
         #    cpu: "3"
@@ -29,11 +29,11 @@ spec:
         #      cpu: "1"
 ---
 
-#Frontend Service
-kind: Service
+#Frontend Serv20240406e
+kind: Serv20240406e
 apiVersion: v1
 metadata:
-  name: eshop-service
+  name: eshop-serv20240406e
 spec:
   selector:
     app: mvc
