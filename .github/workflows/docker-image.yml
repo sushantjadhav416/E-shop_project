@@ -24,11 +24,11 @@ jobs:
            
            git config user.email "sushantjadhav416@gmail.com"
            git config user.name "sushantjadhav416"
-           TAG_DATE=v;
+           TAG_DATE=VR;
            TAG_DATE+=$(date +'%Y%m%d');
            docker build -t sushantjadhavhcl/eshop_updated:${TAG_DATE} ./E_shop/
            docker push sushantjadhavhcl/eshop_updated:${TAG_DATE}
-           sed -i "s/v../${TAG_DATE}/g"  E_shop/Deploymentfiles/Frontend.yaml
+           sed -i "s/VR./${TAG_DATE}/g"  E_shop/Deploymentfiles/Frontend.yaml
            git add -A
            git commit -m "Update deployment image to version ${TAG_DATE}"
            git push https://${{ secrets.GI_TOKEN }}@github.com/sushantjadhav416/E-shop_project HEAD:master
